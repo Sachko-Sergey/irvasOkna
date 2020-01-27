@@ -3,7 +3,7 @@ $(document).ready(function () {
     selector: '.imglist a:visible'
   });
 
-  var clock = $('.section-sales__inner-timer').FlipClock({
+  let clock = $('.section-sales__inner-timer').FlipClock({
     clockFace: 'DailyCounter',
   });
   clock.setTime(220880);
@@ -16,5 +16,19 @@ $(document).ready(function () {
     $(".tab_item-inner").hide().eq($(this).index()).fadeIn()
   }).eq(0).addClass("active");
 
-  
+
+  let hWrap = document.querySelector('.h__wrap');
+  let info = document.querySelector('.header-inner__wrap-info');
+  let bodyLock = document.querySelector('body');
+
+  hWrap.onclick = function () {
+    info.classList.add('active');
+    bodyLock.classList.add('lock');
+  }
+  info.onclick = function () {
+    info.classList.remove('active');
+    bodyLock.classList.remove('lock');
+  }
+
+
 });
