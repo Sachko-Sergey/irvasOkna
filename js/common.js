@@ -31,4 +31,10 @@ $(document).ready(function () {
   }
 
 
+$('.works-slider').slick({
+  dots: true,
+  arrows: false,
+  swipe: true
+});
+
 });
